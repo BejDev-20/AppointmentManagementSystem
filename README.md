@@ -2,10 +2,9 @@
 
 ## Description
 
-An internal international appointment management system based on MySQL server [currently out of commision]. It provides functionality to add, update, delete customers and appointments. Each customer 
+An internal international appointment management system based on MySQL server [currently out of commision]. It provides functionality to add, update, delete customers and appointments. The information is stored in a MySQL DB with maintained cache while the application is running. 
 
-Products can only be deleted when no parts are associated with it. main screen of the app includes two tables for parts and products, including a unique ID, item name, number 
-of items in the inventory, and price per unit. It includes search functionality for the tables.
+
 
 The application implements the MVC pattern using JavaFX. All changes to the parts and products are submitted after a user confirms the action through a confirmation window. 
 Incorrect input handling has also been implemented by design and is as follows:
