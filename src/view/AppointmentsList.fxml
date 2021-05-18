@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="756.0" style="-fx-background-color: #5E81AC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentListController">
+   <children>
+      <Button fx:id="backButton" layoutX="650.0" layoutY="477.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #81A1C1;" text="Back" textFill="#eceff4">
+         <font>
+            <Font name="Ebrima" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow color="#213145" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="275.0" fitWidth="328.0" layoutX="263.0" layoutY="-95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:Images/390a693a-67ab-4387-b0f1-cb31c356d0a5_200x200.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="appointmentsTableView" layoutX="42.0" layoutY="158.0" prefHeight="291.0" prefWidth="673.0" style="-fx-background-color: #D8DEE9;">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="locationColumn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="75.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="75.0" text="End Time" />
+            <TableColumn fx:id="customerColumn" prefWidth="75.0" text="Customer " />
+            <TableColumn fx:id="userColumn" prefWidth="75.0" text="User" />
+            <TableColumn fx:id="contactColumn" prefWidth="75.0" text="Contact" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="42.0" layoutY="472.0" prefHeight="39.0" prefWidth="327.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="addNewAppointmentButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #81A1C1;" text="Add new appointment" textFill="#eceff4">
+               <font>
+                  <Font name="Ebrima" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#213145" />
+               </effect>
+            </Button>
+            <Button fx:id="updateAppointmentButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onActionUpdate" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #81A1C1;" text="Update appointment" textFill="#eceff4" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Ebrima" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#213145" />
+               </effect>
+            </Button>
+            <Button fx:id="deleteAppointmentButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #81A1C1;" text="Delete appointment" textFill="#eceff4" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Ebrima" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#213145" />
+               </effect>
+            </Button>
+         </children>
+      </GridPane>
+      <ComboBox fx:id="contactNameComboBox" layoutX="42.0" layoutY="99.0" prefWidth="150.0" style="-fx-background-color: #D8DEE9;" />
+      <Label fx:id="contactNameLabel" layoutX="42.0" layoutY="75.0" text="Contact Name" textFill="#eceff4">
+         <font>
+            <Font name="Ebrima" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="weekRadioButton" layoutX="219.0" layoutY="103.0" mnemonicParsing="false" selected="true" text="Week" textFill="#eceff4">
+         <toggleGroup>
+            <ToggleGroup fx:id="timeFrame" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="monthRadioButton" layoutX="292.0" layoutY="103.0" mnemonicParsing="false" text="Month" textFill="#eceff4" toggleGroup="$timeFrame" />
+      <RadioButton fx:id="allRadioButton" layoutX="366.0" layoutY="103.0" mnemonicParsing="false" text="All" textFill="#eceff4" toggleGroup="$timeFrame" />
+   </children>
+</AnchorPane>
