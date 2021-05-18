@@ -2,7 +2,8 @@
 
 ## Description
 
-An international inventory management system that maintains lists of parts (made in-house and outsourced) and products with associated parts. The application provides functionality to add, modify, or delete part/product. 
+An internal international appointment management system based on MySQL server [currently out of commision]. It provides functionality to add, update, delete customers and appointments. Each customer 
+
 Products can only be deleted when no parts are associated with it. main screen of the app includes two tables for parts and products, including a unique ID, item name, number 
 of items in the inventory, and price per unit. It includes search functionality for the tables.
 
@@ -54,8 +55,10 @@ Incorrect input handling has also been implemented by design and is as follows:
 ## Requirements
 
 <ul>
-  <li>Java 11 or higher</li>
-  <li>JavaFX 13 or higher</li>
+  <li>IntelliJ IDEA 2019.3</li>
+  <li>Java 11.0.6 or higher</li>
+  <li>JavaFX 11.0.2 or higher</li>
+  <li>mysql-connector-java-8.0</li>
 </ul>
 
 ## Authors
