@@ -1,4 +1,4 @@
-# AppointmentManagementSystem
+# Appointment Management System
 
 ## Description
 
