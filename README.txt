@@ -1,4 +1,4 @@
-# Appointment Management system
+#Appointment Management system
 
 Created by: Iulia Bejsovec
 
